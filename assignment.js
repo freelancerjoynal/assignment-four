@@ -39,3 +39,23 @@ function matchFinder(string1, string2) {
 // console.log(result);
 
 
+// Problem Three
+
+function sortMaker(arr) {
+    var first = arr[0];
+    var second = arr[1];
+
+    if( first && second >0){
+        if(first == second ){
+            return 'equal';
+        }else{
+            return arr.sort((a, b) => b - a);
+        }
+    }else{
+        return 'invalid';
+    }
+
+}
+result = sortMaker([3,0]);
+console.log(result);
+
