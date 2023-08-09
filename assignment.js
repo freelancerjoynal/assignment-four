@@ -22,9 +22,9 @@ function cubeNumber(number) {
 function matchFinder(string1, string2) {
     if (typeof (string1) == 'string' && typeof (string2) == 'string') {
 
-        if(string1.match(string2)){
+        if (string1.match(string2)) {
             return true;
-        }else{
+        } else {
             return false;
         }
 
@@ -45,17 +45,27 @@ function sortMaker(arr) {
     var first = arr[0];
     var second = arr[1];
 
-    if( first && second >0){
-        if(first == second ){
+    if (first && second > 0) {
+        if (first == second) {
             return 'equal';
-        }else{
+        } else {
             return arr.sort((a, b) => b - a);
         }
-    }else{
+    } else {
         return 'invalid';
     }
 
 }
-result = sortMaker([3,0]);
-console.log(result);
+// result = sortMaker([3,0]);
+// console.log(result);
 
+// problem 4
+function findAddress(obj) {
+    var street = obj.street || "__";
+    var house = obj.house || "__";
+    var society = obj.society || "__";
+    result = street + "," + house + "," + society + ",";
+    return result;
+}
+// var result = findAddress({ street:10, house: "15A", society: "Earth Perfect" });
+// console.log(result);
